@@ -4,27 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#D5214A">
 
     <Button
         android:id="@+id/buttonShow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="105dp"
+        android:layout_marginEnd="2dp"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/textViewSimNumber"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonIncomingPhone"
+        app:layout_constraintEnd_toStartOf="@+id/buttonIncomingPhone"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewSimNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginStart="118dp"
         android:layout_marginTop="66dp"
+        android:layout_marginEnd="19dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonIncomingPhone"
         app:layout_constraintTop_toBottomOf="@+id/buttonShow" />
 
     <TextView
@@ -32,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="42dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/textViewIEMI"
         app:layout_constraintTop_toBottomOf="@+id/textViewIEMI" />
@@ -50,12 +51,23 @@
         android:id="@+id/textViewphonenumb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="28dp"
         android:text="TextView"
         android:textColor="#f00"
         app:layout_constraintEnd_toEndOf="@+id/textViewSoftwareVersion"
         app:layout_constraintTop_toBottomOf="@+id/textViewSoftwareVersion" />
+
+    <Button
+        android:id="@+id/buttonIncomingPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="4dp"
+        android:text="IncomingPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonShow"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

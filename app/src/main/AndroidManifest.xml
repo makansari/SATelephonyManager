@@ -2,12 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.satelephonymanager">
-<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_PRECISE_PHONE_STATE"></uses-permission>
-
-
+    <uses-permission android:name="android.permission.READ_PRECISE_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,14 +17,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SATelephonyManager">
-        <activity android:name=".MainActivity"
-            android:theme="@style/mystyle">
+        <activity android:name=".NotificationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/mystyle">
+
+        </activity>
+
+        <receiver android:name=".MyREceiver">
+
+            <!--
+<intent-filter>
+    <action android:name="android.intent.action.CONFIGURATION_CHANGED"/>
+</intent-filter>
+            -->
+        </receiver>
     </application>
 
 </manifest>
