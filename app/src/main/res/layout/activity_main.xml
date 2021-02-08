@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="105dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/textViewSimNumber"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSimNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="66dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonShow" />
+
+    <TextView
+        android:id="@+id/textViewSoftwareVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="41dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewIEMI"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIEMI" />
+
+    <TextView
+        android:id="@+id/textViewIEMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewSimNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSimNumber" />
+
+    <TextView
+        android:id="@+id/textViewphonenumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="28dp"
+        android:text="TextView"
+        android:textColor="#f00"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSoftwareVersion"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSoftwareVersion" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
