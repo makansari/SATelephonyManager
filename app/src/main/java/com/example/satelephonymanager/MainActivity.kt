@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.telephony.TelephonyManager
 import androidx.core.app.ActivityCompat
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,14 +25,16 @@ class MainActivity : AppCompatActivity() {
         buttonShow.setOnClickListener {
 
 
+var iemi = Settings.Secure.getString(applicationContext.contentResolver,Settings.Secure.ANDROID_ID)
+            textViewIEMI.setText("IEMI numb : $iemi")
+
             var softwarever = if (ActivityCompat.checkSelfPermission(this,Manifest.permission.READ_PHONE_STATE
                 ) == PackageManager.PERMISSION_GRANTED
             ) {
                     var softwarever = telManager.deviceSoftwareVersion
                 textViewSoftwareVersion.setText("Software version is : $softwarever")
 
-               /* var iemi = telManager.deviceId
-                textViewIEMI.setText("The iemi number is $iemi")*/
+             
 
                 var phnumber = telManager.line1Number
                 textViewphonenumb.setText("phone number is : $phnumber")
